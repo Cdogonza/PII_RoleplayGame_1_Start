@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections;
 
 namespace Program
 {
@@ -15,7 +15,7 @@ namespace Program
 
         public ArrayList Spells = new ArrayList();
 
-        public Item(string name, int damage, int defense, int restorePoints, string[] spells = [])
+        public Items(string name, int damage, int defense, int restorePoints, ArrayList spells = null)
         {
             this.Name = name;
             this.Damage = damage;
