@@ -30,6 +30,8 @@ namespace Program
             foreach (Items item in this.ItemsList)
             {
                 damageitem += item.Damage;
+                Console.WriteLine(item.Spells);
+    
             }
             int defenseitem = 0;
             foreach (Items item in victim.ItemsList)
