@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+
 namespace Program
 {
     public class Character
@@ -13,7 +14,7 @@ namespace Program
         public int Damage{get;set;}
         public List<Items> ItemsList = new List<Items>();
         
-        public Character (string name, string race, int defense, int lifepoint, int damage, List <Items> itemslist)
+        public Character (string name, string race, int defense, int damage, List <Items> itemslist, int lifepoint = 100)
         {
             this.Race = race;
             this.Name = name;
@@ -42,8 +43,24 @@ namespace Program
             return victim.LifePoint;
         }
 
+        public int GetLifePoint()
+        {
+            return this.LifePoint;
+        }
 
+        public int GetDefensePoint()
+        {
+            return this.Defense;
+        }
 
+        public void AddItem(Items item)
+        {
+            this.ItemsList.Add(item);
+        }
+        public void RemoveItem(Items item)
+        {
+            this.ItemsList.Remove(item);
+        }
 
 
     }
