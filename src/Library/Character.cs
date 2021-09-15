@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-
+using System.Collections.Generic;
 
 namespace Program
 {
@@ -11,7 +11,7 @@ namespace Program
         public int Defense{get;set;}
         public int LifePoint{get;set;}
         public int Damage{get;set;}
-        public ArrayList ItemsList = new ArrayList();
+        public List<Items> ItemsList = new List<Items>();
         
         public Character (string name, string race, int defense, int lifepoint, int damage, List <Items> itemslist)
         {
