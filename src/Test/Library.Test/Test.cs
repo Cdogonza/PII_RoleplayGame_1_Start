@@ -46,6 +46,17 @@ namespace Program
 
             Assert.AreEqual(expected,Zedunpax.Race);
         }
+        
+        [Test]
+        public void InventoryAddTest()
+        {
+            Items Zanpakuto = new Items ("Zanpakuto",35,0,0);
+            List<Items> Inventory = new List<Items>();
+            Inventory.Add (Zanpakuto);
+            int expected = 1;
+            
+            Assert.AreEqual(expected,Inventory.Count);
+        }
 
     }
 
