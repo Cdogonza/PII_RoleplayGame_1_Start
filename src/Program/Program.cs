@@ -26,7 +26,6 @@ namespace Program
             Belen.Attack(Sim);
             Sim.RemoveItem(Martillo);
             Sim.Attack(Belen);
-            Belen.Healing();
         }
     }
 }
