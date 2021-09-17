@@ -23,7 +23,7 @@ namespace Program
         }
 
 
-         [Test]
+        [Test]
         public void ItemNameTest()
         {
             Items Martillo = new Items ("Martillo",2,0,0);
@@ -33,6 +33,18 @@ namespace Program
             string expected = "Martillo";
 
             Assert.AreEqual(expected,Martillo.Name);
+        }
+        
+        [Test]
+        public void CharRaceTest()
+        {
+            Items Hacha = new Items ("Hacha",35,0,0);
+            List<Items> Inventory1 = new List<Items>();
+            Inventory1.Add (Hacha);
+            Character Zedunpax = new Character ("Zedunpax","Wizard",0,2,Inventory1);
+            string expected = "Wizard";
+
+            Assert.AreEqual(expected,Zedunpax.Race);
         }
 
     }
