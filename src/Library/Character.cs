@@ -93,11 +93,6 @@ namespace Program
             this.ItemsList.Remove(item);
         }
 
-        public void RemoveItem(Items item)
-        {
-            this.ItemsList.Remove(item);
-        }
-
         public void Healing()
         {
             this.LifePoint = 100;
