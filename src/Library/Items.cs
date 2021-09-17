@@ -21,8 +21,10 @@ namespace Program
             this.Damage = damage;
             this.Defense = defense;
             this.RestorePoints = restorePoints;
-            this.Spells = spells;
-
+            if (name == "SpellBook")
+            {
+                this.Spells = spells;
+            }
         }
     }
 }
