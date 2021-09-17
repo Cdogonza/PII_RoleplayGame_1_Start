@@ -14,7 +14,7 @@ namespace Program
         public int Damage{get;set;}
         
         public List<Items> ItemsList = new List<Items>();
-
+      
         public Character (string name, string race, int defense, int damage, List <Items> itemslist, int lifepoint = 100)
         {
             if (race == "Elf" || race == "Wizard" || race == "Dwarf")
@@ -85,6 +85,12 @@ namespace Program
             {
                 Console.WriteLine("Solo los magos pueden tener libros de hechizos.");
             }
+            this.ItemsList.Add(item);
+        }
+      
+        public void RemoveItem(Items item)
+        {
+            this.ItemsList.Remove(item);
         }
 
         public void RemoveItem(Items item)
