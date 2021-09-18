@@ -57,6 +57,18 @@ namespace Program
             
             Assert.AreEqual(expected,Inventory.Count);
         }
+        [Test]
+        public void HealingTest()
+        {
+            Items Zanpakuto = new Items ("Zanpakuto",35,0,0);
+            List<Items> Inventory = new List<Items>();
+            Inventory.Add (Zanpakuto);
+            Character SubZero = new Character ("Sim","Wizard",0,2,Inventory,50);
+            int expected = 100;
+            SubZero.Healing();
+            Assert.AreEqual(expected,SubZero.LifePoint);
+        }
+        
 
     }
 
