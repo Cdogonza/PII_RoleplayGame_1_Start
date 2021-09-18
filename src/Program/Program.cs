@@ -8,6 +8,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
+            
             Items Martillo = new Items ("Martillo",2,0,0);
             List<Items> Inventory1 = new List<Items>();
             Inventory1.Add (Martillo);
