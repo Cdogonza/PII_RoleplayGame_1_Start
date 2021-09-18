@@ -57,6 +57,7 @@ namespace Program
             
             Assert.AreEqual(expected,Inventory.Count);
         }
+
         [Test]
         public void HealingTest()
         {
@@ -67,6 +68,24 @@ namespace Program
             int expected = 100;
             SubZero.Healing();
             Assert.AreEqual(expected,SubZero.LifePoint);
+        }
+
+        [Test]
+        public void AttackTest()
+        {
+            Items Martillo = new Items ("Martillo",2,0,0);
+            List<Items> Inventory1 = new List<Items>();
+            Inventory1.Add (Martillo);
+            Character Sim = new Character ("Sim","Wizard",0,2,Inventory1);
+
+            Items Lanza = new Items ("Lanza",4,0,0);
+            List<Items> Inventory2 = new List<Items>();
+            Inventory2.Add (Lanza);
+            Character Belen = new Character ("Belen","Elf",3,0,Inventory2);
+
+            Belen.Attack(Sim);
+            int expected = 96;
+            Assert.AreEqual(expected,Sim.LifePoint);
         }
         
 
