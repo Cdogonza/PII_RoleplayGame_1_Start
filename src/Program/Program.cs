@@ -17,7 +17,7 @@ namespace Program
             Items Lanza = new Items ("Lanza",4,0,0);
             List<Items> Inventory2 = new List<Items>();
             Inventory2.Add (Lanza);
-            Character Belen = new Character ("Belen","caca",3,0,Inventory2);
+            Character Belen = new Character ("Belen","Elf",3,0,Inventory2);
 
             ArrayList SpellList = new ArrayList{"Galletita","Manzana venenosa","Cuchara"};
             Items SpellBook = new Items ("SpellBook",0,0,2,SpellList);
