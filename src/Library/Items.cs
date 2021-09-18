@@ -3,6 +3,7 @@ using System.Collections;
 
 namespace Program
 {
+//Esta clase se crean los item de los personajes 
     public class Items
     {
         public string Name {get; set;}
@@ -21,6 +22,7 @@ namespace Program
             this.Damage = damage;
             this.Defense = defense;
             this.RestorePoints = restorePoints;
+// En el caso de que el item sea Spellbook se le permite cargar los hechizos
             if (name == "SpellBook")
             {
                 this.Spells = spells;
